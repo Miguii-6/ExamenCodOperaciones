@@ -7,6 +7,8 @@ public class OperacionesBasicas {
         static final int DIVISION=4;
     static final int RAIZ=6;
 
+    static final int RAIZCUBICA=7;
+
     /**
      * @param device --> operación a realizar (SUMA, RESTA, MULTIPLICACIÓN, DIVISIÓN)
      * @param num1 --> primer numero de la operación
@@ -49,7 +51,7 @@ public class OperacionesBasicas {
                     }
                     /**
                      * Examen
-                     * Usamos o num1 para facer a raiz
+                     * Usamos o num1 para facer a raiz cuadrada
                      */
 
                 case RAIZ:
@@ -59,6 +61,15 @@ public class OperacionesBasicas {
                         System.out.println("Error");
                     }
 
+                    /**
+                     * Usamos o num2 para facer a raiz cubica
+                     */
+                case RAIZCUBICA:
+                    try{
+                        resultado= (float) Math.cbrt(num2);
+                    }catch (Exception e){
+                        System.out.println("Error");
+                    }
             }
             return resultado;
         }
