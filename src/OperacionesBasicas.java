@@ -5,6 +5,7 @@ public class OperacionesBasicas {
         static final int RESTA=2;
         static final int MULTIPLICACION=3;
         static final int DIVISION=4;
+    static final int RAIZ=6;
 
     /**
      * @param device --> operación a realizar (SUMA, RESTA, MULTIPLICACIÓN, DIVISIÓN)
@@ -46,7 +47,18 @@ public class OperacionesBasicas {
                     }catch (Exception e){
                         System.out.println("Error");
                     }
-                    break;
+                    /**
+                     * Examen
+                     * Usamos o num1 para facer a raiz
+                     */
+
+                case RAIZ:
+                    try{
+                        resultado= (float) Math.sqrt(num1);
+                    }catch (Exception e){
+                        System.out.println("Error");
+                    }
+
             }
             return resultado;
         }
