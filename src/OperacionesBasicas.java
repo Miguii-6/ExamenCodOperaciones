@@ -5,6 +5,9 @@ public class OperacionesBasicas {
         static final int RESTA=2;
         static final int MULTIPLICACION=3;
         static final int DIVISION=4;
+    static final int RAIZ=6;
+
+
 
     /**
      * @param device --> operación a realizar (SUMA, RESTA, MULTIPLICACIÓN, DIVISIÓN)
@@ -17,6 +20,7 @@ public class OperacionesBasicas {
 
 
         public static float operacions(int device, float num1, float num2){
+
             switch (device){
                 case SUMA:
                     try{
@@ -46,7 +50,24 @@ public class OperacionesBasicas {
                     }catch (Exception e){
                         System.out.println("Error");
                     }
-                    break;
+
+                    /**
+                     * o num1 e o numero a raiz e o num2 e o numero do indice
+                     */
+
+
+                case RAIZ:
+                    try{
+
+                        resultado= (float)  Math.pow(num1, 1.0 / num2);
+
+                    }catch (NumberFormatException e){
+                        System.out.println("Error");
+                    }
+
+
+
+
             }
             return resultado;
         }
