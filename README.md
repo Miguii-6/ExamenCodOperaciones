@@ -12,10 +12,12 @@ try{
                     }
 
 
-e no cath poñemos o seguinte:
+E no catch poñemos o seguinte:
 
 }catch (NumberFormatException e){
                         System.out.println("Error");
                     }
                     
 Unha vez feito esto poñemos unh aopcion mais na main.
+
+
