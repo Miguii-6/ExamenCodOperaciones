@@ -7,7 +7,7 @@ public class OperacionesBasicas {
         static final int DIVISION=4;
     static final int RAIZ=6;
 
-    static final int RAIZCUBICA=7;
+
 
     /**
      * @param device --> operación a realizar (SUMA, RESTA, MULTIPLICACIÓN, DIVISIÓN)
@@ -20,6 +20,7 @@ public class OperacionesBasicas {
 
 
         public static float operacions(int device, float num1, float num2){
+
             switch (device){
                 case SUMA:
                     try{
@@ -49,27 +50,24 @@ public class OperacionesBasicas {
                     }catch (Exception e){
                         System.out.println("Error");
                     }
+
                     /**
-                     * Examen
-                     * Usamos o num1 para facer a raiz cuadrada
+                     * o num1 e o numero a raiz e o num2 e o numero do indice
                      */
+
 
                 case RAIZ:
                     try{
-                        resultado= (float) Math.sqrt(num1);
-                    }catch (Exception e){
+
+                        resultado= (float)  Math.pow(num1, 1.0 / num2);
+
+                    }catch (NumberFormatException e){
                         System.out.println("Error");
                     }
 
-                    /**
-                     * Usamos o num2 para facer a raiz cubica
-                     */
-                case RAIZCUBICA:
-                    try{
-                        resultado= (float) Math.cbrt(num2);
-                    }catch (Exception e){
-                        System.out.println("Error");
-                    }
+
+
+
             }
             return resultado;
         }
